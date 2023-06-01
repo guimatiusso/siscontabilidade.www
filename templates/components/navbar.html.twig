@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md justify-content-between">
+    <a class="navbar-brand" href="#">
+        <img src="{{ asset('/assets/images/logo_full.png') }}" alt="Logo" width="143" class="d-inline-block align-text-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="nav mx-auto collapse navbar-collapse justify-content-center" id="navbarNav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" role="button" href="#">Sobre</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Serviços
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-dark" href="#">Abertura de empresa</a></li>
+                <li><a class="dropdown-item text-dark" href="#">Contabilidade</a></li>
+                <li><a class="dropdown-item text-dark" href="#">Contabilidade para Importação Exportação</a></li>
+                <li><a class="dropdown-item text-dark" href="#">Certificado Digital</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" role="button">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" role="button">Fale com a gente</a>
+        </li>
+    </ul>
+    <div class="d-flex flex-column align-items-baseline">
+        <p class="mb-2">(44) 3026-6080</p>
+        <div>
+            {% include 'components/social_media.html.twig' %}
+        </div>
+    </div>
+</nav>
