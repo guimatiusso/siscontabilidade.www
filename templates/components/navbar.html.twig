@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md justify-content-between">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ path('app_home_page') }}">
         <img src="{{ asset('/assets/images/logo_full.png') }}" alt="Logo" width="143" class="d-inline-block align-text-top">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,10 +7,10 @@
     </button>
     <ul class="nav mx-auto collapse navbar-collapse justify-content-center" id="navbarNav">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="{{ path('app_home_page') }}">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" role="button" href="#">Sobre</a>
+            <a class="nav-link text-dark" role="button" href="{{ path('sobre_page') }}">Sobre</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

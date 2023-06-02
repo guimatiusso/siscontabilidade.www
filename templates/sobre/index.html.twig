@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Sobre | Siscon Contabilidade{% endblock %}
+
+{% block body %}
+    <article>
+        <section>
+            <div class="container">
+                <img class="img-fluid w-100" src="{{ asset('assets/images/sobre_top_img.webp') }}">
+            </div>
+        </section>
+
+        <section class="container bg-info-subtle p-5 my-4 text-center">
+            <p class="h1 text-primary mb-4">SOBRE NÓS</p>
+            <p class="h5 text-black fw-bold mb-4">Apoio contábil cuidadosamente desenvolvido</p>
+            <p class="text-black mb-4">
+                O Siscon Contabilidade iniciou suas atividades em 1991 com apenas um contador e
+                três funcionários. Na época a informática ainda dava seus primeiros passos no Brasil e por isso a maior
+                parte do trabalho contábil era realizado manualmente ou em máquinas de escrever
+            </p>
+            <p class="text-black mb-4">
+                Assim como a tecnologia foi se aperfeiçoando e trazendo mudanças significaticas para o setor, o Siscon
+                Contabilidade também evolouiu e se transformou na empresa estruturada e moderna que é hoje.
+            </p>
+            <p class="text-black">
+                Atualmente o Siscon Contabilidade conta com uma equipe de mais de 20 profissionais altamente qualificados.
+                A empresa está estabelecida em sede própria com mais de 250m<sup>2</sup>. Venha tomar um café com a
+                gente e conheça os diferenciais que só o Siscon Contabilidade oferece para você.
+            </p>
+        </section>
+
+        <section class="container-fluid d-flex p-0">
+            <div class="col-md position-relative">
+                <img class="img-fluid w-100" src="{{ asset('assets/images/accountant_working_clean.webp') }}">
+                <p class="carousel-caption text-white fs-5" style="top: 40%">CHAME AGORA NO WHATSAPP</p>
+                <p class="carousel-caption text-white fs-5" style="top: 45%">(44) 3026-6080</p>
+                <div class="text-center carousel-caption" style="top: 65%">
+                    <a href="https://api.whatsapp.com/send?phone=554430266080" target="_blank" type="button" class="btn btn-primary">Clique aqui</a>
+                </div>
+            </div>
+            <div class="col-md position-relative">
+                <img class="img-fluid w-100" src="{{ asset('assets/images/visite_nos.webp') }}">
+                <p class="carousel-caption text-white fs-5" style="top: 40%">CHAME AGORA NO WHATSAPP</p>
+                <p class="carousel-caption text-white fs-5" style="top: 45%">Av. Dr. Alexandre Rasgulaeff, 752 - Jardim Alvorada, Maringá - PR</p>
+                <div class="text-center carousel-caption" style="top: 65%">
+                    <a href="https://www.google.com/maps?client=safari&rls=en&q=Av.+Dr.+Alexandre+Rasgulaeff,+752+-+Jardim+Alvorada,+Maring%C3%A1+-+PR&oe=UTF-8&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjChfrH8-zuAhU8GbkGHWeDCAUQ_AUoAXoECAMQAw" target="_blank" type="button" class="btn btn-primary">Veja no Mapa</a>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}
