@@ -3,4 +3,66 @@
 {% block title %}Abertura de Empresa | Siscon Contabilidade{% endblock %}
 
 {% block body %}
+    <section class="container p-5">
+        <div class="col-md d-flex">
+            <div class="col-md-6">
+                <img src="{{ asset('assets/images/business_man.webp') }}" alt="Sobre" class="img-fluid">
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center p-5">
+                <p class="text-info-emphasis fs-2 fw-bold">ABERTURA DE EMPRESA</p>
+                <p class="fw-bold fs-4">Assessoria para o sucesso</p>
+                <p class="fw-light text-center lh-lg">
+                    Experiência e agilidade são dois fatores fundamentais para quem deseja abrir um novo
+                    negócio. Há mais de 30 anos interagimos no mercado com a abertura de negócios inovadores e
+                    acompanhamento de planos de negócios de sucesso. Tecnologia de ponta, capacitação de colaboradores e
+                    ações de produtividade são os nossos diferenciais. Abra a sua empresa com a gente!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container p-5 mb-5">
+        <div class="col-md">
+            <p class="text-info-emphasis text-center fs-1 fw-bold">SE VOCÊ CHEGOU ATÉ AQUI FALE CONOSCO</p>
+            <p class="text-center">
+                Este é o momento ideial para você tirar suas dúvidas caso deseja empreender. Nós queremos te ajudar!
+                Deixe seu nome, telefone e e-mail que entraremos em contato
+            </p>
+        </div>
+        <form>
+            <div class="mb-3">
+                <input type="text" placeholder="Nome" class="form-control border-black p-2" id="nameInput" aria-describedby="nameInput">
+            </div>
+            <div class="mb-3">
+                <input type="email" placeholder="E-mail" class="form-control border-black p-2" id="emailInput">
+            </div>
+            <div class="mb-5">
+                <input type="tel" placeholder="Telefone" class="form-control border-black p-2" id="telefoneInput">
+            </div>
+            <div class="mb-4 pt-5 d-flex justify-content-center">
+                <button type="submit" class="btn btn-dark fw-light text-white py-4 px-5">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="container-fluid d-flex p-0">
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/accountant_working_clean.webp',
+                'title': 'CHAME AGORA NO WHATSAPP',
+                'subtitle': '(44) 3026-6080',
+                'link_href': 'https://api.whatsapp.com/send?phone=554430266080',
+                'link_text': 'Clique aqui'
+            } %}
+        </div>
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/city.webp',
+                'title': 'VISITE-NOS',
+                'subtitle': 'Av. Dr. Alexandre Rasgulaeff, 752 - Jardim Alvorada, Maringá - PR',
+                'link_href': 'https://www.google.com/maps?client=safari&rls=en&q=Av.+Dr.+Alexandre+Rasgulaeff,+752+-+Jardim+Alvorada,+Maring%C3%A1+-+PR&oe=UTF-8&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjChfrH8-zuAhU8GbkGHWeDCAUQ_AUoAXoECAMQAw',
+                'link_text': 'Veja no Mapa'
+            } %}
+        </div>
+    </section>
 {% endblock %}
