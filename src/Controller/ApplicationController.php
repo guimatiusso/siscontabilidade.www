@@ -12,7 +12,7 @@ class ApplicationController extends AbstractController
      * @Route("/", name="app_home_page")
      * @return Response
      */
-    public function homepage()
+    public function show()
     {
         return $this->render('application/homepage.html.twig');
     }

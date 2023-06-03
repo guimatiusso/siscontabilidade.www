@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Serviços | Siscon Contabilidade{% endblock %}
+
+{% block body %}
+    <section class="container-fluid d-flex p-0">
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/bg_servicos.webp',
+                'title': 'SERVIÇOS',
+                'subtitle': 'Mais de 30 anos gerando negócios para valer',
+                'link_href': null
+            } %}
+        </div>
+    </section>
+
+    <section class="container-fluid p-0 d-flex">
+        <div class="col-md-6 d-flex">
+            {% include 'components/horizontal_card_img_left.html.twig' with {
+                'path_to_img' : 'assets/images/accountant.webp',
+                'title': 'CONTABILIDADE',
+                'subtitle': 'Contabilidade para decisões conscientes',
+                'href_link': 'sobre_page',
+                'text_link': 'Saiba Mais'
+            } %}
+        </div>
+
+        <div class="col-md-6 d-flex">
+            {% include 'components/horizontal_card_img_left.html.twig' with {
+                'path_to_img' : 'assets/images/calculating.webp',
+                'title': 'CERTIFICADO DIGITAL',
+                'subtitle': 'Compre de forma prática',
+                'href_link': 'servico_certificado_digital_page',
+                'text_link': 'Compre agora'
+            } %}
+        </div>
+    </section>
+
+    <section class="container-fluid p-0 d-flex">
+        <div class="col-md-6 d-flex">
+            {% include 'components/horizontal_card_img_right.html.twig' with {
+                'path_to_img' : 'assets/images/calculator.webp',
+                'title': 'ABERTURA DE EMPRESA',
+                'subtitle': 'Empreenda com agilidade e segurança',
+                'href_link': 'servico_abretura_empresa_page',
+                'text_link': 'Saiba Mais'
+            } %}
+        </div>
+
+        <div class="col-md-6 d-flex">
+            {% include 'components/horizontal_card_img_right.html.twig' with {
+                'path_to_img' : 'assets/images/accountant.webp',
+                'title': 'IMPORTAÇÃO E EXPORTAÇÃO',
+                'subtitle': 'Nós entendemos do assunto',
+                'href_link': 'servico_contabilidade_importacao_exportacao_page',
+                'text_link': 'Saiba Mais'
+            } %}
+        </div>
+    </section>
+{% endblock %}

@@ -12,7 +12,7 @@ class SobreController extends AbstractController
      * @Route("sobre", name="sobre_page")
      * @return Response
      */
-    public function sobre()
+    public function show()
     {
         return $this->render('sobre/index.html.twig');
     }
