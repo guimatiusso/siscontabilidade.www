@@ -10,7 +10,7 @@
             </div>
         </section>
 
-        <section class="container bg-info-subtle p-5 my-4 text-center">
+        <section class="container bg-body-secondary p-5 my-4 text-center">
             <p class="h1 text-primary mb-4">SOBRE NÓS</p>
             <p class="h5 text-black fw-bold mb-4">Apoio contábil cuidadosamente desenvolvido</p>
             <p class="text-black mb-4">
@@ -31,20 +31,22 @@
 
         <section class="container-fluid d-flex p-0">
             <div class="col-md position-relative">
-                <img class="img-fluid w-100" src="{{ asset('assets/images/accountant_working_clean.webp') }}">
-                <p class="carousel-caption text-white fs-5" style="top: 40%">CHAME AGORA NO WHATSAPP</p>
-                <p class="carousel-caption text-white fs-5" style="top: 45%">(44) 3026-6080</p>
-                <div class="text-center carousel-caption" style="top: 65%">
-                    <a href="https://api.whatsapp.com/send?phone=554430266080" target="_blank" type="button" class="btn btn-primary">Clique aqui</a>
-                </div>
+                {% include 'components/img_with_text_over.html.twig' with {
+                    'path_to_img' : 'assets/images/accountant_working_clean.webp',
+                    'title': 'CHAME AGORA NO WHATSAPP',
+                    'subtitle': '(44) 3026-6080',
+                    'link_href': 'https://api.whatsapp.com/send?phone=554430266080',
+                    'link_text': 'Clique aqui'
+                } %}
             </div>
             <div class="col-md position-relative">
-                <img class="img-fluid w-100" src="{{ asset('assets/images/visite_nos.webp') }}">
-                <p class="carousel-caption text-white fs-5" style="top: 40%">CHAME AGORA NO WHATSAPP</p>
-                <p class="carousel-caption text-white fs-5" style="top: 45%">Av. Dr. Alexandre Rasgulaeff, 752 - Jardim Alvorada, Maringá - PR</p>
-                <div class="text-center carousel-caption" style="top: 65%">
-                    <a href="https://www.google.com/maps?client=safari&rls=en&q=Av.+Dr.+Alexandre+Rasgulaeff,+752+-+Jardim+Alvorada,+Maring%C3%A1+-+PR&oe=UTF-8&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjChfrH8-zuAhU8GbkGHWeDCAUQ_AUoAXoECAMQAw" target="_blank" type="button" class="btn btn-primary">Veja no Mapa</a>
-                </div>
+                {% include 'components/img_with_text_over.html.twig' with {
+                    'path_to_img' : 'assets/images/accountant_working_clean.webp',
+                    'title': 'VISITE-NOS',
+                    'subtitle': 'Av. Dr. Alexandre Rasgulaeff, 752 - Jardim Alvorada, Maringá - PR',
+                    'link_href': 'https://www.google.com/maps?client=safari&rls=en&q=Av.+Dr.+Alexandre+Rasgulaeff,+752+-+Jardim+Alvorada,+Maring%C3%A1+-+PR&oe=UTF-8&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjChfrH8-zuAhU8GbkGHWeDCAUQ_AUoAXoECAMQAw',
+                    'link_text': 'Veja no Mapa'
+                } %}
             </div>
         </section>
     </article>

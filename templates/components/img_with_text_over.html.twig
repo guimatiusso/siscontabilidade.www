@@ -1,0 +1,10 @@
+<div class="col-md position-relative">
+    <img class="img-fluid w-100" src="{{ asset(path_to_img) }}">
+    <div class="text-center carousel-caption" style="top: 40%">
+        <p class="text-white fw-bold fs-5">{{ title }}</p>
+        <p class="text-white fw-bold fs-5">{{ subtitle }}</p>
+        {% if link_href %}
+        <a href="{{ link_href }}" target="_blank" type="button" class="btn py-2 px-3 btn-primary">{{ link_text }}</a>
+        {% endif %}
+    </div>
+</div>
