@@ -21,29 +21,7 @@
         </div>
     </section>
 
-    <section class="container p-5 mb-5">
-        <div class="col-md">
-            <p class="text-info-emphasis text-center fs-1 fw-bold">SE VOCÊ CHEGOU ATÉ AQUI FALE CONOSCO</p>
-            <p class="text-center">
-                Este é o momento ideial para você tirar suas dúvidas caso deseja empreender. Nós queremos te ajudar!
-                Deixe seu nome, telefone e e-mail que entraremos em contato
-            </p>
-        </div>
-        <form>
-            <div class="mb-3">
-                <input type="text" placeholder="Nome" class="form-control border-black p-2" id="nameInput" aria-describedby="nameInput">
-            </div>
-            <div class="mb-3">
-                <input type="email" placeholder="E-mail" class="form-control border-black p-2" id="emailInput">
-            </div>
-            <div class="mb-5">
-                <input type="tel" placeholder="Telefone" class="form-control border-black p-2" id="telefoneInput">
-            </div>
-            <div class="mb-4 pt-5 d-flex justify-content-center">
-                <button type="submit" class="btn btn-dark fw-light text-white py-4 px-5">Enviar</button>
-            </div>
-        </form>
-    </section>
+    {% include 'components/contact_form.html.twig' %}
 
     <section class="container-fluid d-flex p-0">
         <div class="col-md position-relative">

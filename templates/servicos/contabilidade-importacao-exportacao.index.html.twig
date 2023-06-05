@@ -3,4 +3,75 @@
 {% block title %}Importação e Exportação | Siscon Contabilidade{% endblock %}
 
 {% block body %}
+    <section class="container p-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <p class="text-info-emphasis fs-2 fw-bold">SOMOS ESPECIALISTAS NA ÁREA DE IMPORTAÇÃO E EXPORTAÇÃO</p>
+                    <p class="fw-bold">Assessoria para Comércio Exterior</p>
+                    <p class="fw-light lh-lg">
+                        Empresas importadoras e exportadoras podem contar com nossa experiência de trabalho. Buscamos alcançar
+                        melhores resultados no planejamento e adequação tributária, bem como fiscal e contábil para o melhor
+                        desembaraço aduaneiro. Também desenvolvemos balanços específicos com foco na habilitação para o Sistema Radar.
+                    </p>
+                </div>
+                <div>
+                    <p class="fw-bold">Com a Siscon Contabilidade você tem:</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item ps-0">Consultoria específica e orientação para Emissão de Notas Fiscais;</li>
+                        <li class="list-group-item ps-0">Assessoria tributária relacionadas ao TTD's (Tratamento Tributário Diferenciado)</li>
+                        <li class="list-group-item ps-0">Cálculo de créditos presumidos;</li>
+                        <li class="list-group-item ps-0">Cumprimento das declarações acessórias pertinentes ao regime especial escolhido</li>
+                        <li class="list-group-item ps-0">Análise, orientação e elaboração do Cadastro do Siscomex/Radas (limitado e ilimitado)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 p-5 bg-dark-subtle">
+                <div>
+                    <p class="text-dark fs-2 fw-bold text-center">PREENCHA O FORMULÁRIO E RECEBA MAIS INFORMAÇÕES SOBRE O ASSUNTO</p>
+                    <p class="text-center">
+                        <small>
+                            Este é o momento ideal para você tirar suas dúvidas caso deseja empreender. Nós queremos te ajusar! Deixe
+                            seu nome, telefone e e-mail que entraremos em contato.
+                        </small>
+                    </p>
+                </div>
+                <form class="d-flex flex-column justify-content-center align-items-center my-4">
+                    <div class="w-75 mb-3">
+                        <input type="text" placeholder="Nome" class="form-control border-black p-2" id="nameInput" aria-describedby="nameInput">
+                    </div>
+                    <div class="w-75 mb-3">
+                        <input type="email" placeholder="E-mail" class="form-control border-black p-2" id="emailInput">
+                    </div>
+                    <div class="w-75 mb-4">
+                        <input type="tel" placeholder="Telefone" class="form-control border-black p-2" id="telefoneInput">
+                    </div>
+                    <div class="d-flex justify-content-center pt-2">
+                        <button type="submit" class="btn btn-dark fw-light text-white py-4 px-5">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid d-flex p-0">
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/accountant_working_clean.webp',
+                'title': 'CHAME AGORA NO WHATSAPP',
+                'subtitle': '(44) 3026-6080',
+                'link_href': 'https://api.whatsapp.com/send?phone=554430266080',
+                'link_text': 'Clique aqui'
+            } %}
+        </div>
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/city.webp',
+                'title': 'VISITE-NOS',
+                'subtitle': 'Av. Dr. Alexandre Rasgulaeff, 752 - Jardim Alvorada, Maringá - PR',
+                'link_href': 'https://www.google.com/maps?client=safari&rls=en&q=Av.+Dr.+Alexandre+Rasgulaeff,+752+-+Jardim+Alvorada,+Maring%C3%A1+-+PR&oe=UTF-8&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjChfrH8-zuAhU8GbkGHWeDCAUQ_AUoAXoECAMQAw',
+                'link_text': 'Veja no Mapa'
+            } %}
+        </div>
+    </section>
 {% endblock %}

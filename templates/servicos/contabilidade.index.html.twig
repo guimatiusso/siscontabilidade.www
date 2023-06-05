@@ -3,4 +3,43 @@
 {% block title %}Contabilidade | Siscon Contabilidade{% endblock %}
 
 {% block body %}
+    <section class="container p-5">
+        <div class="col-md d-flex">
+            <div class="col-md-6">
+                <img src="{{ asset('assets/images/business_man.webp') }}" alt="Sobre" class="img-fluid">
+            </div>
+            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center p-5">
+                <p class="text-info-emphasis fs-2 fw-bold">CONTABILIDADE</p>
+                <p class="fw-bold fs-4 text-center">Para uma gestão consciente aposte no desenvolvimento de uma contabilidade de verdade</p>
+                <p class="fw-light text-center lh-lg">
+                    Contabilidade para melhores resultados. Integramos toda a rotina contábil com os setores fiscais
+                    e de recursos humanos com a utilização das novas tecnologias. Não importa o tamanho da empresa.
+                    O nosso negócio é garantir melhor gestão do negócio com a nossa Contabilidade.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/contact_form.html.twig' %}
+
+    <section class="container-fluid d-flex p-0">
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/accountant_working_clean.webp',
+                'title': 'CHAME AGORA NO WHATSAPP',
+                'subtitle': '(44) 3026-6080',
+                'link_href': 'https://api.whatsapp.com/send?phone=554430266080',
+                'link_text': 'Clique aqui'
+            } %}
+        </div>
+        <div class="col-md position-relative">
+            {% include 'components/img_with_text_over.html.twig' with {
+                'path_to_img' : 'assets/images/city.webp',
+                'title': 'VISITE-NOS',
+                'subtitle': 'Av. Dr. Alexandre Rasgulaeff, 752 - Jardim Alvorada, Maringá - PR',
+                'link_href': 'https://www.google.com/maps?client=safari&rls=en&q=Av.+Dr.+Alexandre+Rasgulaeff,+752+-+Jardim+Alvorada,+Maring%C3%A1+-+PR&oe=UTF-8&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjChfrH8-zuAhU8GbkGHWeDCAUQ_AUoAXoECAMQAw',
+                'link_text': 'Veja no Mapa'
+            } %}
+        </div>
+    </section>
 {% endblock %}

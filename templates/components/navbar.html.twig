@@ -7,21 +7,21 @@
     </button>
     <ul class="nav mx-auto collapse navbar-collapse justify-content-center" id="navbarNav">
         <li class="nav-item">
-            <a class="nav-link{% if app.request.get('_route') is same as ('app_home_page') %} active{% endif %}" role="button" href="{{ path('app_home_page') }}">Inicio</a>
+            <a class="nav-link{% if app.request.get('_route') is same as ('app_home_page') %} text-primary active{% else %} text-black{% endif %}" role="button" href="{{ path('app_home_page') }}">Inicio</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link{% if app.request.get('_route') is same as ('sobre_page') %} active{% endif %}" role="button" href="{{ path('sobre_page') }}">Sobre</a>
+            <a class="nav-link{% if app.request.get('_route') is same as ('sobre_page') %} text-primary active{% else %} text-black{% endif %}" role="button" href="{{ path('sobre_page') }}">Sobre</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Serviços
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servicos_page') %} active{% endif %}" href="{{ path('servicos_page') }}">Serviços</a></li>
-                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_abretura_empresa_page') %} active{% endif %}" href="{{ path('servico_abretura_empresa_page') }}">Abertura de empresa</a></li>
-                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_contabilidade_page') %} active{% endif %}" href="{{ path('servico_contabilidade_page') }}">Contabilidade</a></li>
-                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_contabilidade_importacao_exportacao_page') %} active{% endif %}" href="{{ path('servico_contabilidade_importacao_exportacao_page') }}">Contabilidade para Importação Exportação</a></li>
-                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_certificado_digital_page') %} active{% endif %}" href="{{ path('servico_certificado_digital_page') }}">Certificado Digital</a></li>
+                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servicos_page') %} active{% else %} text-black{% endif %}" href="{{ path('servicos_page') }}">Serviços</a></li>
+                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_abretura_empresa_page') %} active{% else %} text-black{% endif %}" href="{{ path('servico_abretura_empresa_page') }}">Abertura de empresa</a></li>
+                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_contabilidade_page') %} active{% else %} text-black{% endif %}" href="{{ path('servico_contabilidade_page') }}">Contabilidade</a></li>
+                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_contabilidade_importacao_exportacao_page') %} active{% else %} text-black{% endif %}" href="{{ path('servico_contabilidade_importacao_exportacao_page') }}">Contabilidade para Importação Exportação</a></li>
+                <li><a class="dropdown-item{% if app.request.get('_route') is same as ('servico_certificado_digital_page') %} active{% else %} text-black{% endif %}" href="{{ path('servico_certificado_digital_page') }}">Certificado Digital</a></li>
             </ul>
         </li>
         <li class="nav-item">

@@ -3,4 +3,30 @@
 {% block title %}Certificado Digital | Siscon Contabilidade{% endblock %}
 
 {% block body %}
+    <section class="container p-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid" src="{{ asset('assets/images/technology.webp') }}" alt="Certificaso Digital">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <div class="my-3 text-center">
+                    <p class="text-info-emphasis fs-2 fw-bold">CERTIFICADO DIGITAL</p>
+                    <p class="fw-bold">Assine documentos com mais segurança e facilidade</p>
+                </div>
+                <div class="text-center">
+                    <p>Faça o seu certificado digital sem sair da sua casa ou escritório!</p>
+                    <ul class="list-group list-group-flush my-3">
+                        <li class="list-group-item ps-0">Emita notas fiscais eletrônicas com rapidez</li>
+                        <li class="list-group-item ps-0">Enive declarações e obrigações acessórias</li>
+                        <li class="list-group-item ps-0">Faça declarações bancárias com segurança</li>
+                        <li class="list-group-item ps-0">Mais credibilidade para você e sua empresa</li>
+                    </ul>
+                    <p>Agende agora seu horário e tenha o certificado em mão dentro de poucos dias.</p>
+                    <a href="https://api.whatsapp.com/send?phone=554430266080" target="_blank" type="button" class="btn py-2 px-3 btn-primary">Fazer meu certificado agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/contact_form.html.twig' %}
 {% endblock %}
