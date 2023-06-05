@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Blog | Siscon Contabilidade{% endblock %}
+
+{% block body %}
+    <article class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <span class="navbar-brand text-muted">Todos os posts</span>
+                <div class="d-flex" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item d-flex">
+                            <form class="collapse fade" id="searchForm">
+                                <input id="search" type="search" class="form-control border border-secondary text-secondary bg-light" placeholder="search" />
+                            </form>
+                            <a class="nav-link mx-3" href="#searchForm" aria-controls="searchForm" data-bs-target="#searchForm" data-bs-toggle="collapse">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link border border-dark text-dark" aria-current="page" href="#">Login/Registre-se</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="border border-secondary p-5 m-5 mt-1 text-center">
+            <p class="fw-bold fs-2 text-dark">Verifique em breve</p>
+            <p class="text-dark">Assim que novos posts forem publicados, você poderá vê-los aqui.</p>
+        </section>
+    </article>
+{% endblock %}
