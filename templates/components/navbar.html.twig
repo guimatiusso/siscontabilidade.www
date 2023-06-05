@@ -28,7 +28,7 @@
             <a class="nav-link {% if app.request.get('_route') is same as ('blog_page') %} active{% else %} text-black{% endif %}" href="{{ path('blog_page') }}" role="button">Blog</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" role="button">Fale com a gente</a>
+            <a class="nav-link {% if app.request.get('_route') is same as ('contato_page') %} active{% else %} text-black{% endif %}" href="{{ path('contato_page') }}" role="button">Fale com a gente</a>
         </li>
     </ul>
     <div class="d-flex flex-column align-items-baseline">

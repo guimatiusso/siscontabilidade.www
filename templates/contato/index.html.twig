@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Fale com a gente | Siscon Contabilidade{% endblock %}
+
+{% block body %}
+    <article class="container-fluid">
+        <section class="row">
+            <div class="col-md-6 p-0">
+                <video class="w-100" autoplay muted loop id="myVideo">
+                    <source src="{{ asset('assets/images/siscon.mov') }}" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-md-6 text-center d-flex flex-column justify-content-center">
+                <div class="contact-information">
+                    <p class="h1 text-primary fw-bold mb-4">CONTATO</p>
+                    <p class="text-black">Av. Dr. Alexandre Rasgulaeff,752</p>
+                    <p class="text-black">Jardim Alvorada</p>
+                    <p class="text-black">Maringá - PR, 87033-080, Brasil</p>
+                    <p class="text-black">siscon@siscon.cnt.br</p>
+                    <p class="text-black">(44) 3026-6080</p>
+                    <p class="text-black">
+                        {% include 'components/social_media.html.twig' %}
+                    </p>
+                </div>
+                <div class="form-contato container-fluid mb-5 p-5 d-flex flex-column align-items-center">
+                    <form class="w-75">
+                        <div class="mb-3">
+                            <input type="text" placeholder="Nome" class="form-control bg-body-tertiary border-black p-2" id="nameInput" aria-describedby="nameInput">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" placeholder="E-mail" class="form-control bg-body-tertiary border-black p-2" id="emailInput">
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" placeholder="Telefone" class="form-control bg-body-tertiary border-black p-2" id="telefoneInput">
+                        </div>
+                        <div class="mb-5">
+                            <textarea class="form-control bg-body-tertiary border-black p-2" placeholder="Digite sua mensagem aqui..." id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="mb-4 pt-5 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-dark fw-light text-white py-4 px-5">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501.03621830635086!2d-51.91942556254753!3d-23.4018240985334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd12339842d99%3A0x642cdeb72591c526!2sSiscon%20Contabilidade%20e%20Assessoria!5e0!3m2!1spt-BR!2sbr!4v1685927664894!5m2!1spt-BR!2sbr" width="1920" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </article>
+{% endblock %}
