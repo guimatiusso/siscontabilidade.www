@@ -3,11 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class UserController extends AbstractController
 {
@@ -15,14 +16,21 @@ class UserController extends AbstractController
      * @Route("user-create", name="app_user_create")
      * @return Response
      */
-    public function create(EntityManagerInterface $entityManager): Response
+    public function create(ValidatorInterface $validator): Response
     {
         $user = new User();
-        $user->setEmail('rottamatiusso@gmail.com');
+        $user->setEmail(null);
         $user->setName('Guilherme Matiusso');
 
-        $entityManager->persist($user);
-        $entityManager->flush();
+        $form = $this->createForm(UserType::class, $user);
+
+        $errors = $validator->validate($user);
+        if (count($errors) > 0) {
+            return new Response((string) $errors, 400);
+        }
+
+//        $entityManager->persist($user);
+//        $entityManager->flush();
 
         return new Response('Usuário salvo com sucesso');
     }
@@ -31,11 +39,14 @@ class UserController extends AbstractController
      * @Route("user-show/{id}", name="app_show_users")
      * @return Response
      */
-    public function show(EntityManagerInterface $entityManager, int $id): Response
+    public function showByPk(User $user): Response
     {
-        $user = $entityManager->getRepository(User::class)->find($id);
-
         if (!$user) throw $this->createNotFoundException('Não foi encontrado nenhum usuário');
+
+        var_dump("Encontrado usuário com id {$user->getId()} e nome {$user->getName()}");
+
+        $user->setName("Josivan");
+        var_dump("Encontrado usuário com id {$user->getId()} e nome {$user->getName()}");
 
         return new Response("Encontrado usuário com id {$user->getId()} e nome {$user->getName()}");
     }
